@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  nats-streaming:
+    image: nats-streaming:latest
+    container_name: nats-streaming
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+    networks:
+      - nats-net
+    restart: always
+
+networks:
+  nats-net:
+    driver: bridge
