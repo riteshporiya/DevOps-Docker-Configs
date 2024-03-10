@@ -1,0 +1,37 @@
+version: '3.8'
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.1
+    container_name: elasticsearch-techspecs
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=true
+      - ELASTIC_USERNAME=${ELASTIC_USERNAME} // Default will be 'elastic'
+      - ELASTIC_PASSWORD=${ELASTIC_PASSWORD}
+      - ELASTIC_PORT=${ELASTIC_PORT}
+
+    ports:
+      - 9200:9200
+    volumes:
+      - elasticsearch_dataa:/usr/share/elasticsearch/data
+    networks:
+      - es-net
+    command: >
+      bash -c 'if [ ! -d "/usr/share/elasticsearch/plugins/analysis-phonetic" ]; then
+        elasticsearch-plugin install analysis-phonetic;
+      fi;
+      /usr/local/bin/docker-entrypoint.sh'
+
+    deploy:
+      resources:
+        limits:
+          memory: 300m
+        reservations:
+          memory: 100m
+
+volumes:
+  elasticsearch_data:
+    driver: local
+
+networks:
+  es-net:

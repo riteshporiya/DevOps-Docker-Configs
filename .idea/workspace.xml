@@ -61,12 +61,24 @@
       <updated>1709373459381</updated>
       <workItem from="1709373461758" duration="1681000" />
       <workItem from="1709375275779" duration="103000" />
-      <workItem from="1709375389405" duration="288000" />
+      <workItem from="1709375389405" duration="960000" />
+      <workItem from="1710054421631" duration="1129000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />

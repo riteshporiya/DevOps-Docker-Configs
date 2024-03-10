@@ -17,6 +17,7 @@ Before you begin, ensure you have the following installed on your local machine:
 - **nats**: Docker Compose files and configurations for NATS setup.
 - **postgresql**: Docker Compose files and configurations for PostgreSQL setup.
 - **redis**: Docker Compose files and configurations for Redis setup.
+- **elasticSearch**: Docker Compose files and configurations for ElasticSearch setup.
 
 ## Getting Started 🏁
 
